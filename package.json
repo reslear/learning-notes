@@ -1,0 +1,16 @@
+{
+  "name": "learning-notes",
+  "version": "1.0.0",
+  "description": "my learning notes repo",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reslear/learning-notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*"
+  ]
+}

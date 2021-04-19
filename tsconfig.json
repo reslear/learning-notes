@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "es6",
-      "webworker",
-      "dom"
-    ]
+    "target": "ESNext",
+    "composite": true
   }
 }
