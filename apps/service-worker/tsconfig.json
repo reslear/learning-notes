@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "lib": ["ES2015", "WebWorker", "DOM"],
-    "types": ["vite/client", "/types/*"],
+    "types": ["vite/client"],
+    "typeRoots": ["types"],
     "module": "ESNext"
   },
   "extends": "../../tsconfig.json"
