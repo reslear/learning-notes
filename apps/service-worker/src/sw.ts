@@ -1,17 +1,35 @@
-const cacheName = 'myWorker'
-const version = 'v0.0.1'
+const CACHE_NAME = 'myWorker-v0.0.2'
 
-self.addEventListener('activate', async (e: ExtendableEvent) => {
+// assets for cache
+const cacheAssets = ['index.html', 'favicon.svg', '/src/sw.ts']
+
+// install webworker
+self.addEventListener('install', (e) => {
+  console.log('Service Worker: Installed')
+
+  e.waitUntil(async () => {
+    try {
+      const cache = await caches.open(CACHE_NAME)
+      console.log(`sw [${CACHE_NAME}]: Caching Files`)
+      return cache.addAll(cacheAssets)
+    } catch (e) {
+      self.skipWaiting()
+    }
+  })
+})
+
+// cleaning old cache
+self.addEventListener('activate', async (e) => {
   console.log('Service Worker: Activated')
 
   e.waitUntil(async () => {
     const cacheNames = await caches.keys()
 
     return Promise.all(
-      cacheNames.map((cache) => {
-        if (cache !== cacheName) {
-          console.log('Service Worker: Clearing Old Cache')
-          return caches.delete(cache)
+      cacheNames.map((cacheName) => {
+        if (cacheName !== CACHE_NAME) {
+          console.log(`sw [${cacheName}]: remove old cache`)
+          return caches.delete(cacheName)
         }
       })
     )

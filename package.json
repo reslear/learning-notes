@@ -1,8 +1,8 @@
 {
   "name": "learning-notes",
+  "private": true,
   "version": "1.0.0",
   "description": "my learning notes repo",
-  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reslear/learning-notes.git"
@@ -12,5 +12,9 @@
   "license": "MIT",
   "workspaces": [
     "apps/*"
-  ]
+  ],
+  "dependencies": {
+    "typescript": "^4.2.4",
+    "vite": "^2.1.5"
+  }
 }
