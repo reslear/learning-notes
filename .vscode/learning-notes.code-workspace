@@ -1,12 +1,16 @@
 {
   "folders": [
     {
-      "name": "🚀 service-worker",
-      "path": "../apps/service-worker"
+      "name": "✨ learning-notes",
+      "path": ".."
     },
     {
-      "name": "root",
-      "path": ".."
+      "name": "🚀 algorithms",
+      "path": "../apps/algorithms"
+    },
+    {
+      "name": "🚀 service-worker",
+      "path": "../apps/service-worker"
     }
   ],
   "settings": {}
