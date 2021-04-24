@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "🚀 service-worker",
+      "path": "../apps/service-worker"
+    },
+    {
+      "name": "root",
+      "path": ".."
+    }
+  ],
+  "settings": {}
+}
