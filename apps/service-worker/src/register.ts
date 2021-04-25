@@ -1,9 +1,11 @@
+export const ext = import.meta.env.DEV ? 'ts' : 'js'
+
 export const registerServiceWorker = async () => {
   try {
-    let reg = await navigator.serviceWorker.register('./src/sw.ts')
-    console.log('Service Worker register, scope:', reg)
+    let reg = await navigator.serviceWorker.register(`./sw.${ext}`)
+    console.log('[sw] registered successfully', reg)
   } catch (err) {
-    console.error(err)
+    console.error('[sw] register failed', err)
   }
 }
 

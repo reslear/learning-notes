@@ -3,7 +3,8 @@
     "lib": ["ES2015", "WebWorker", "DOM"],
     "types": ["vite/client"],
     "typeRoots": ["types"],
-    "module": "ESNext"
+    "module": "ESNext",
+    "moduleResolution": "Node"
   },
   "extends": "../../tsconfig.json"
 }

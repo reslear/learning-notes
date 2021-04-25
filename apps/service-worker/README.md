@@ -6,18 +6,18 @@
 - **activate** - After install, use for cleaning previous cache
 - ...
 
+### set cache name
+
+### set cache assets
+
+## Cheats
+
 ### Set dev mode
 
 > _Chrome -> devtools -> Application -> Service Workers -> Update on reload_
 
 ![](./doc/assets/update-on-reload.png)
 
-### set cache name
+### sw file in root
 
-### set cache assets
-
-```ts
-
-```
-
-icon: [](https://www.flaticon.com/free-icon/gear_889741?related_id=889741&origin=pack)
+use `sw.js` file in root folder for skip scope caveats
